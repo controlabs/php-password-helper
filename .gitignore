@@ -1,4 +1,7 @@
-/vendor/
 .idea
+/vendor/
 cli
+data
+
 coverage-report.xml
+phpunit.xml
