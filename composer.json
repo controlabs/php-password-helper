@@ -1,0 +1,19 @@
+{
+  "name": "controlabs/password-helper",
+  "description": "Helper to encrypt and verify passwords",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Carlos Rodrigues",
+      "email": "carlosrodriguesf96@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "phpunit/phpunit": "^7.4"
+  },
+  "config": {
+    "bin-dir": "cli"
+  }
+}

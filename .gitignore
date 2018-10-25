@@ -1,0 +1,4 @@
+/vendor/
+.idea
+cli
+coverage-report.xml
