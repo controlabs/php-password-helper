@@ -13,7 +13,7 @@
 [![composer.lock](https://poser.pugx.org/controlabs/password-helper/composerlock)](https://packagist.org/packages/controlabs/password-helper)
 [![Total Downloads](https://poser.pugx.org/controlabs/password-helper/downloads)](https://packagist.org/packages/controlabs/password-helper)
 
-Helper to generate JWT using firebase/php-jwt in a simplified way.
+Helper to encrypt and verify passwords.
 
 ## Installation
 
