@@ -3,15 +3,21 @@
   "description": "Helper to encrypt and verify passwords",
   "type": "library",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Carlos Rodrigues",
-      "email": "carlosrodriguesf96@gmail.com"
-    }
-  ],
   "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Controlabs\\": "src"
+    }
+  },
   "require-dev": {
-    "phpunit/phpunit": "^7.4"
+    "phpunit/phpunit": "^7.4",
+    "phpstan/phpstan": "^0.10.3"
+  },
+  "scripts": {
+    "cs": "phpcs --standard=PSR2 src",
+    "test": "phpunit -c phpunit.xml --colors=always",
+    "test-cover": "phpunit --coverage-text",
+    "phpstan": "phpstan analyse src --level=7"
   },
   "config": {
     "bin-dir": "cli"
