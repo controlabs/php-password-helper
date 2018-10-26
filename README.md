@@ -25,9 +25,9 @@ composer require controlabs/password-helper
 
 This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/controlabs/php-password-helper/blob/master/LICENSE) for details.
 
-##Usages
+## Usages
 
-##### Encrypting password like a Ciro Gomes
+##### Encrypting password
 ```php
 use Controlabs\Helper\Password as PasswordHelper;
 
