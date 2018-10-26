@@ -24,3 +24,36 @@ composer require controlabs/password-helper
 ## License
 
 This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/controlabs/php-password-helper/blob/master/LICENSE) for details.
+
+##Usages
+
+##### Encrypting password like a Ciro Gomes
+```php
+use Controlabs\Helper\Password as PasswordHelper;
+
+$helper = new PasswordHelper();
+
+$passwordData = $helper->encrypt($_POST['password']);
+
+$user = new User();
+$user->login = 'controlabs';
+$user->password = $passwordData->password();
+$user->password_salt = $passwordData->salt();
+$user->save();
+```
+
+##### Verify password
+```php
+use Controlabs\Http\Exception\Unauthorized; // composer require controlabs/http-exceptions (optional)
+use Controlabs\Helper\Password as PasswordHelper;
+
+$helper = new PasswordHelper();
+
+$user = User::findByLogin('login', $_POST['login']);
+
+$accept = $user and $helper->verify($user->password, $_POST['password'], $user->password_salt);
+
+if(!$accept) {
+    throw new Unauthorized('Invalid login or password.');
+}
+```

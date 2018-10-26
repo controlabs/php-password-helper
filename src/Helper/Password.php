@@ -9,7 +9,7 @@ class Password
     public function encrypt(string $password, string $salt = null, string $algorithm = self::SHA_512): PasswordData
     {
         if (!$salt) {
-            $salt = hash($algorithm, uniqid(mt_rand(1, mt_getrandmax()), true));
+            $salt = hash($algorithm, uniqid(strval(mt_rand(1, mt_getrandmax())), true));
         }
 
         $password = hash($algorithm, $password . $salt);
