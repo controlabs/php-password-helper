@@ -21,11 +21,7 @@ Helper to encrypt and verify passwords.
 composer require controlabs/password-helper
 ```
 
-## License
-
-This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/controlabs/php-password-helper/blob/master/LICENSE) for details.
-
-## Usages
+## Usage
 
 ##### Encrypting password
 ```php
@@ -57,3 +53,7 @@ if(!$accept) {
     throw new Unauthorized('Invalid login or password.');
 }
 ```
+
+## License
+
+This software is open source, licensed under the The MIT License (MIT). See [LICENSE](https://github.com/controlabs/php-password-helper/blob/master/LICENSE) for details.
